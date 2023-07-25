@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+span {
+  background-color: rgb(214, 147, 22);
+  color: black;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 600px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0 0 5px rgb(214, 147, 22);
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: rgb(214, 147, 22);
+}
+input, select {
+  width: 90%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: large;
+}
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  border: 2px solid rgb(214, 147, 22);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: rgb(214, 147, 22); /* Change the background color on hover */
+}
+
+.blurred {
+  filter: blur(5px); /* Apply a blur effect to the fields */
+  pointer-events: none; /* Disable interactions with the blurred fields */
+}
