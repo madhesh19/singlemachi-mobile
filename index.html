@@ -4,31 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Single Machi Subscription form</title>
+  <link rel="icon" href="https://pbs.twimg.com/profile_images/1253736283429646336/E5YoO62M_400x400.jpg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="particles-js">
-    <div class="container">
-      <h2><span>Single</span> Machi Premium Subscription</h2>
+   
+    <div class="container" >
+      <h2>Single <span>Machi</span> Premium Subscription</h2>
       <form>
-        <div class="form-group">
+        <div class="form-group" data-tilt data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="telegram_username">Telegram Username:</label>
           <input type="text" id="telegram_username" name="telegram_username" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="telegram_user_id">Telegram User ID:</label>
           <input type="text" id="telegram_user_id" name="telegram_user_id" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="plan">Plan:</label>
           <select id="plan" name="plan" required>
             <option value="">Select a plan</option>
@@ -36,26 +37,35 @@
             <option value="Standard">Standard (3 months)</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="profile_screenshot">Profile Screenshot:</label>
           <input type="file" id="profile_screenshot" name="profile_screenshot" accept="image/*" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="date">Date:</label>
           <input type="date" id="date" name="date" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="mobile_number">Mobile Number:</label>
           <input type="tel" id="mobile_number" name="mobile_number" required>
         </div>
-        <button type="submit">Submit</button>
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
+          <label for="additional_comments">How do you get to know about this bot?</label>
+          <textarea id="additional_comments" name="additional_comments"></textarea>
+        </div>
+  
+        <button type="submit" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">Submit</button>
       </form>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  
 
-  <script src="app.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+
+  
   
 
   <script src="blur.js"></script>

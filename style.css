@@ -6,6 +6,7 @@ body {
 h2 {
   text-align: center;
   color: white;
+  
 }
 
 span {
@@ -13,35 +14,38 @@ span {
   color: black;
 }
 
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+
 
 .container {
   max-width: 600px;
-  width: 75%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 35px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-color: black;
-  box-shadow: 0 0 5px rgb(214, 147, 22);
-  border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  box-shadow: 0 0 15px rgb(214, 147, 22);
+  border-radius: 25px;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
 }
 .form-group {
   margin-bottom: 20px;
+  padding-left: 25px; /* Add left padding to move labels slightly to the right */
+  text-align: left;
+  transform-style: preserve-3d ;
+  transform: perspective(1000px);
+  transform: translateZ(20px)
 }
+
+
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
   color: rgb(214, 147, 22);
+  transition: transform 0.2s;
+  
 }
 input, select {
   width: 90%;
@@ -51,6 +55,23 @@ input, select {
   background-color: white;
   color: black;
   font-size: large;
+  transition: transform 0.2s;
+  
+}
+
+textarea{
+  width: 80%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: large;
+  transition: transform 0.2s;
+}
+
+input:hover, select:hover, textarea:hover {
+  box-shadow: 0 0px 30px rgb(214, 147, 22); /* Apply a subtle shadow effect on hover */
 }
 button {
   padding: 10px 20px;
@@ -66,7 +87,14 @@ button:hover {
   background-color: rgb(214, 147, 22); /* Change the background color on hover */
 }
 
+/* Blur effect for form fields when one is clicked */
 .blurred {
   filter: blur(5px); /* Apply a blur effect to the fields */
   pointer-events: none; /* Disable interactions with the blurred fields */
 }
+/* Zoom effect for clicked form field and its label */
+.zoomed {
+  transform: scale(1.1); /* Apply a zoom effect to the field and the label */
+ /* Adding a transform transition for the zoom effect */
+}
+
