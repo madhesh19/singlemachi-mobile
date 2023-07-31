@@ -12,7 +12,7 @@
    
     <div class="container" >
       <h2>Single <span>Machi</span> Premium Subscription</h2>
-      <form>
+      <form id="myForm" action="http://localhost:3000/submit-form" method="post" enctype="multipart/form-data">
         <div class="form-group" data-tilt data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
@@ -39,7 +39,11 @@
         </div>
         <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="profile_screenshot">Profile Screenshot:</label>
-          <input type="file" id="profile_screenshot" name="profile_screenshot" accept="image/*" required>
+          <input type="file" id='profile_screenshot' name='profile_screenshot' accept="image/*" required>
+        </div>
+        <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
+          <label for="payment_screenshot">Payment Screenshot:</label>
+          <input type="file" id='payment_screenshot' name='payment_screenshot' accept="image/*"  required>
         </div>
         <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="date">Date:</label>
@@ -53,8 +57,10 @@
           <label for="additional_comments">How do you get to know about this bot?</label>
           <textarea id="additional_comments" name="additional_comments"></textarea>
         </div>
-  
-        <button type="submit" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">Submit</button>
+        <div>
+          <button type="Submit" class="btn"><span>Submit</span><img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="62" width="62"></button>
+        </div>
+            
       </form>
     </div>
 
@@ -67,7 +73,7 @@
 
   
   
-
+  <script src="button.js"></script>
   <script src="blur.js"></script>
 </body>
 </html>
