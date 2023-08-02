@@ -12,7 +12,7 @@
    
     <div class="container" >
       <h2>Single <span>Machi</span> Premium Subscription</h2>
-      <form id="myForm" action="https://singlemachi-backend.onrender.com/submit-form" method="post" enctype="multipart/form-data">
+      <form name="myForm" id="myForm"  method="post" enctype="multipart/form-data">
         <div class="form-group" data-tilt data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
@@ -39,7 +39,7 @@
         </div>
         <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="profile_screenshot">Profile Screenshot:</label>
-          <input type="file" id='profile_screenshot' name='profile_screenshot' accept="image/*" required>
+          <input type="file" id='profile_screenshot' name='profile_screenshot' accept="image/*"  required>
         </div>
         <div class="form-group" data-tilt  data-tilt-scale="1.2" data-tilt-axis="x">
           <label for="payment_screenshot">Payment Screenshot:</label>
@@ -58,22 +58,61 @@
           <textarea id="additional_comments" name="additional_comments"></textarea>
         </div>
         <div>
-          <button type="Submit" class="btn"><span>Submit</span><img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="62" width="62"></button>
+          <button id="submitBtn" type="submit" class="btn"><span>Submit</span><img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="62" width="62"></button>
         </div>
             
       </form>
     </div>
 
+   
+    <script>
+      // JavaScript to handle form submission and display alert message
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+    
+        // Get form data
+        var formData = new FormData(this);
+    
+        // Create an AJAX request to submit form data to Google Sheets
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://script.google.com/macros/s/AKfycbznJlB4vqRzr4WFz7P4duQgoz01VFJFjLuJbgGXsGVVNadORL2i1e30i6axrxM0C8fPmg/exec', true);
+        xhr.onload = function() {
+          // Handle the response
+          if (xhr.status === 200) {
+            // If the response status is 200, it means the form submission was successful
+            // You can show a success message here
+            alert('Form submitted successfully!'); // Change this message to your desired success message
+            // Optionally, you can reset the form after successful submission
+            document.getElementById('myForm').reset();
+          } else {
+            // If the response status is not 200, there was an error with the form submission
+            // You can show an error message here
+            alert('Form submission failed. Please try again.'); // Change this message to your desired error message
+          }
+        };
+        xhr.send(formData);
+      });
+    </script>
+
+    
+   
+
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="button.js"></script>
+    <script src="blur.js"></script>
+   
+    
+    
+
+    
+    
+
   
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   
-
-  
-  
-  <script src="button.js"></script>
-  <script src="blur.js"></script>
 </body>
 </html>
